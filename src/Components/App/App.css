@@ -2,37 +2,46 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 1vh;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Create card for users to show in display results */
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  max-width: 350px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  text-align: left;
+  padding: 2px 16px;
+}
+
+/* Contain image to card size*/
+.user-image {
+  width: 100%;
+}
+
+/* Results div to space image cards evenly*/
+.results {
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }

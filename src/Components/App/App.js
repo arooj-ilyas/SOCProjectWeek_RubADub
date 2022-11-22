@@ -1,4 +1,5 @@
-import './App.css';
+import './App.css'
+import Display from '../Display/Display.js'
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
           rub-a-dub!
         </h1>
       </header>
+      <Display />
     </div>
   );
 }
