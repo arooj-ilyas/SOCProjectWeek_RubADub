@@ -7,14 +7,14 @@ import Title from '../Title/Title.js'
 import Results from '../Results/Results.js'
 import SearchNav from '../SearchNav/SearchNav.js';
 
-function Display({data}) {
+function Display({data, handleChange, onChange}) {
 //let name = 'krish'
 //console.log(data.payload[0].name)
 
     return(
         <div>
         <Title />
-        <SearchNav />
+        <SearchNav handleChange = {handleChange} onChange={onChange}/>
         <Results data = {data} />
         </div>
     )

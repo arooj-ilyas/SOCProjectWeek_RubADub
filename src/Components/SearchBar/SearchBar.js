@@ -1,15 +1,15 @@
 //SearchBar component
-//Path: App > SearchNav > SEARCHBAR
+//Path: App > Display > SearchNav > SEARCHBAR
 //To contain: input field with search icon
 //Props: ??
 
-function SearchBar() {
+function SearchBar({handleChange}) {
     return(
         <input type="text"
-        placeholder="search by key word or phrase"
+        placeholder="🔍 search by key word or phrase"
         className="search-bar"
-        id="search-bar">
-
+        id="search-bar"
+        onChange = {handleChange}>
     </input>
     )
   }

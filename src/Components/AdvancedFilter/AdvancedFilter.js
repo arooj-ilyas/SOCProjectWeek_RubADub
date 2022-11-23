@@ -26,19 +26,19 @@ const pLang = [
     //need to import actual country/lang etc options here
   ]
 
-function AdvancedFilter({handleChange}) {
+function AdvancedFilter({onChange}) {
     return(
         <div className="advanced-filter" id="advanced-filter">
             <Dropdown options={pLang}
-            handleChange={handleChange}
+            onChange={onChange}
             placeholder="Programming language"/>
 
             <Dropdown options={location}
-            handleChange={handleChange}
+            onChange={onChange}
             placeholder="Location"/>
 
             <Dropdown options={sLang}
-            handleChange={handleChange}
+            onChange={onChange}
             placeholder="Spoken language"/>
         </div>
     )

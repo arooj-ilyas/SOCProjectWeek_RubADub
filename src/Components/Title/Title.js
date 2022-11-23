@@ -5,7 +5,7 @@
 
 function Title() {
     return(
-        <h2 className="title" id="title">Page Title</h2>
+        <h2 className="title" id="title">Search Mentors</h2>
     )
   }
   

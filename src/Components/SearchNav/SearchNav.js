@@ -1,17 +1,17 @@
 //SearchNav component
-//Path: App > SEARCHNAV > SearchBar / AdvancedFilter > DropDown
+//Path: App > Display > SEARCHNAV > SearchBar / AdvancedFilter > DropDown
 //To contain: SearchBar, AdvancedFilter
 //Props: ??
 
 import AdvancedFilter from '../AdvancedFilter/AdvancedFilter';
 import SearchBar from '../SearchBar/SearchBar.js'
 
-function SearchNav({handleChange}) {
+function SearchNav({handleChange, onChange}) {
     return(
         <div className="search-nav" id="search-nav">
-            <SearchBar />
+            <SearchBar handleChange = {handleChange}/>
             <AdvancedFilter
-            handleChange={handleChange}
+            onChange={onChange}
             />
         </div>
     )

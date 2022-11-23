@@ -9,7 +9,7 @@ import Tag from '../Tag/Tag.js'
 import Bio from '../Bio/Bio.js'
 
 function UserCard({data}) {
-    console.log(data)
+    //console.log(data)
 
     return(
         <div className="card">

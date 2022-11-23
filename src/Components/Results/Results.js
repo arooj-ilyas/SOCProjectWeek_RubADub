@@ -6,12 +6,14 @@
 import UserCard from '../UserCard/UserCard.js'
 
 function Results({data}) {
-  console.log(data.name)
+  //console.log(data.name)
 
     return(
         <div id='results' className="results">
         {data.map((userEntry) =>
-          <UserCard data = {userEntry} />
+          <UserCard key = {userEntry.id}
+          data = {userEntry}
+          />
         )}
        </div>
 

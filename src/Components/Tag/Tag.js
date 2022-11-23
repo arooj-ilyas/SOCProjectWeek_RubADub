@@ -4,10 +4,10 @@
 //Props: ??
 
 function Tag({tags}) {
-    console.log(tags);
+    //console.log(tags);
     return(
         tags?.map((tag) =>
-            <button className="user-tag" id="user-tag">{tag}</button> )
+            <button className="user-tag" id="user-tag" key={tag}>{tag}</button> )
     )  }
   
   export default Tag;
