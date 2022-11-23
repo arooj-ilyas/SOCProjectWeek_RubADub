@@ -5,7 +5,12 @@
 
 function SearchBar() {
     return(
-        <input type="text" placeholder="search by key word or phrase" className="search-bar" id="search-bar"></input>
+        <input type="text"
+        placeholder="search by key word or phrase"
+        className="search-bar"
+        id="search-bar">
+
+    </input>
     )
   }
   

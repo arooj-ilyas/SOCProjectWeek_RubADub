@@ -11,7 +11,7 @@ import Select from 'react-select'
 
 
 
-function Dropdown({options, placeholder}) {
+function Dropdown({options, placeholder, handleChange}) {
     return(
         <div className="dropdown" id="dropdown">
   <Select
@@ -19,6 +19,7 @@ function Dropdown({options, placeholder}) {
   placeholder ={placeholder}
   isMulti
   name={placeholder}
+  onChange={handleChange}
    />
         </div>
     )

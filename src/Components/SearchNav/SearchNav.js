@@ -6,11 +6,13 @@
 import AdvancedFilter from '../AdvancedFilter/AdvancedFilter';
 import SearchBar from '../SearchBar/SearchBar.js'
 
-function SearchNav() {
+function SearchNav({handleChange}) {
     return(
         <div className="search-nav" id="search-nav">
             <SearchBar />
-            <AdvancedFilter />
+            <AdvancedFilter
+            handleChange={handleChange}
+            />
         </div>
     )
   }

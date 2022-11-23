@@ -8,8 +8,8 @@ import { useEffect, useState } from 'react'
 function App() {
   
 const [data, setData] = useState([])
+const [search, setSearch] = useState([])
 
-//console.log(data)
 
 useEffect(()=>{
   async function getAllData() {
@@ -17,21 +17,23 @@ useEffect(()=>{
     const dataJson = await response.json() 
   
     setData(dataJson.payload)
-    //console.log(data)
   }
- // console.log(data)
   getAllData()
 },[])
 
 useEffect(()=>{
-  console.log(data)
-  
-},[data])
+  console.log(`data console log >>> ${data}`)
+  console.log(`search console log >>> ${search}`)
+},[data, search ])
+
+//create a function that captures the value of the programming language dropdown and uses that value to send dropdown title as searchParam, and dropdown content as searchValue, and saves in setSearch state.
+  //get value of dropdown menu
 
 return (
     <div className="App">
       <Header logo={logo}/>
-      <Display data = {data} />
+      <Display data = {data}
+      handleChange={(e)=> setSearch(e.target.value)}/>
     </div>
   );
 }
