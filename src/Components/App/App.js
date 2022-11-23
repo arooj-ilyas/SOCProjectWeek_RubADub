@@ -1,14 +1,13 @@
 import './App.css'
 import Display from '../Display/Display.js'
+import Header from '../Header/Header.js'
+import logo from './logo512.png'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>
-          rub-a-dub!
-        </h1>
-      </header>
+      <Header logo={logo}/>
       <Display />
     </div>
   );

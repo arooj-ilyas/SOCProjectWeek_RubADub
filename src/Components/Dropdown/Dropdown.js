@@ -3,10 +3,18 @@
 //To contain: mapped results of option for dropdown category
 //Props: ??
 
-function Dropdown() {
+
+import React from 'react'
+import Select from 'react-select'
+
+
+
+
+
+function Dropdown({options, placeholder}) {
     return(
-        <div>
-        <p>Dropdown component</p>
+        <div className="dropdown" id="dropdown">
+  <Select options={options} placeholder ={placeholder} />
         </div>
     )
   }

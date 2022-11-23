@@ -5,11 +5,13 @@
 
 import Title from '../Title/Title.js'
 import Results from '../Results/Results.js'
+import SearchNav from '../SearchNav/SearchNav.js';
 
 function Display() {
     return(
         <div>
         <Title />
+        <SearchNav />
         <Results />
         </div>
     )

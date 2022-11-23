@@ -3,11 +3,15 @@
 //To contain: logo, brand name
 //Props: ??
 
-function Branding() {
+
+function Branding({logo}) {
     return(
-        <div>
-        <img>logo to go here</img>
-        <h3 className="branding" id="branding">Branding Component</h3>
+        <div className="branding" id="branding">
+              <img className="logo" id="logo" src={logo} alt="logo"/>
+            <div className="brand-text" id='brand-text'>
+                <h3 className="rub-a-dub" id="rub-a-dub">rub-a-dub</h3>
+                <h4 className="developer-hub" id="developer-hub">developer hub</h4>
+            </div>
         </div>
     )
   }

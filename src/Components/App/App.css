@@ -2,15 +2,52 @@
   text-align: center;
 }
 
-.App-header {
+.header {
   background-color: #282c34;
   min-height: 5vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: 1vh;
   color: white;
+  width: 100vw;
+  flex-grow: 1;
+  align-content: stretch;
+}
+
+/*change logo size in header*/
+.logo {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 7vw;
+  background-color: greenyellow;
+}
+
+.branding {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: red;
+}
+
+.brand-text {
+  display: flex;
+flex-direction: column;
+align-self: center;
+justify-content: center;
+  width: 100%;
+  background-color: fuchsia;
+  align-content: stretch;
+  height: 100%;
+}
+
+.menu {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
 }
 
 /* Create card for users to show in display results */
@@ -45,3 +82,19 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
+/*Advanced filter div to place dropdowns side by side horizontally, not vertically! */
+.advanced-filter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  }
+
+/*Drop down component to stretch across top of page */
+.dropdown {
+  flex-grow: 1;
+  max-width: 33%
+}
+

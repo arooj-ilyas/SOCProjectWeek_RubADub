@@ -5,7 +5,10 @@
 
 function Menu() {
     return(
-        <b className="menu" id="menu">MENU</b>
+        <div className="menu" >
+        <b id="menu">MENU</b>
+        </div>
+
     )
   }
   
