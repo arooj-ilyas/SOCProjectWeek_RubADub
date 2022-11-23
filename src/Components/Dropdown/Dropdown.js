@@ -14,7 +14,12 @@ import Select from 'react-select'
 function Dropdown({options, placeholder}) {
     return(
         <div className="dropdown" id="dropdown">
-  <Select options={options} placeholder ={placeholder} />
+  <Select
+  options={options}
+  placeholder ={placeholder}
+  isMulti
+  name={placeholder}
+   />
         </div>
     )
   }
