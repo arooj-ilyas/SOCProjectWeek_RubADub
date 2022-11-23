@@ -3,9 +3,9 @@
 //To contain: bio from user table
 //Props: ??
 
-function Bio() {
+function Bio({bio}) {
     return(
-        <p className="user-bio" id="user-bio">`bio bio bio bio bio bio`</p>
+        <p className="user-bio" id="user-bio">{bio}</p>
     )
   }
   

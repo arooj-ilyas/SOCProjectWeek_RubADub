@@ -5,13 +5,14 @@
 
 import UserCard from '../UserCard/UserCard.js'
 
-function Results({name}) {
+function Results({data}) {
+  console.log(data.name)
+
     return(
         <div id='results' className="results">
-        <UserCard name = {name} />
-        <UserCard />
-        <UserCard />
-        <UserCard />
+        {data.map((userEntry) =>
+          <UserCard data = {userEntry} />
+        )}
        </div>
 
     )

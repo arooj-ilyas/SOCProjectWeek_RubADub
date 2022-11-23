@@ -8,14 +8,16 @@ import UserName from '../UserName/UserName'
 import Tag from '../Tag/Tag.js'
 import Bio from '../Bio/Bio.js'
 
-function UserCard({name}) {
+function UserCard({data}) {
+    console.log(data)
+
     return(
         <div className="card">
         <Image />
         <div className="container">
-            <UserName name = {name} />
-            <Tag />
-            <Bio />
+            <UserName name = {data?.name} />
+            <Tag tags = {data?.programming_lang}/>
+            <Bio bio = {data?.bio}/>
         </div>
         </div>
     )

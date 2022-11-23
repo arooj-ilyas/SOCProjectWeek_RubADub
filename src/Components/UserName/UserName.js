@@ -4,6 +4,7 @@
 //Props: ??
 
 function UserName({name}) {
+    //console.log(data.name)
     return(
         <b className="user-name" id="user-name">{name}</b>
     )

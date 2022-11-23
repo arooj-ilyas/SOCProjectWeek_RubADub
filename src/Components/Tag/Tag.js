@@ -3,10 +3,11 @@
 //To contain: key tags for user e.g. programming languages
 //Props: ??
 
-function Tag() {
+function Tag({tags}) {
+    console.log(tags);
     return(
-        <p className="user-tag" id="user-tag">`TAG`</p>
-    )
-  }
+        tags?.map((tag) =>
+            <button className="user-tag" id="user-tag">{tag}</button> )
+    )  }
   
   export default Tag;

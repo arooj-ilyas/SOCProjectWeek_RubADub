@@ -12,15 +12,15 @@ const [data, setData] = useState([])
 //console.log(data)
 
 useEffect(()=>{
-  async function getData() {
+  async function getAllData() {
     const response = await fetch('http://localhost:3000/users', {method: 'GET', headers: {accept: 'application/JSON'},})
     const dataJson = await response.json() 
   
-    setData(dataJson)
+    setData(dataJson.payload)
     //console.log(data)
   }
  // console.log(data)
-  getData()
+  getAllData()
 },[])
 
 useEffect(()=>{
@@ -28,11 +28,7 @@ useEffect(()=>{
   
 },[data])
 
-
-
-
-
-  return (
+return (
     <div className="App">
       <Header logo={logo}/>
       <Display data = {data} />

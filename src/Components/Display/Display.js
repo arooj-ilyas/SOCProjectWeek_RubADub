@@ -8,15 +8,14 @@ import Results from '../Results/Results.js'
 import SearchNav from '../SearchNav/SearchNav.js';
 
 function Display({data}) {
-
-let name = 'krish'
+//let name = 'krish'
 //console.log(data.payload[0].name)
 
     return(
         <div>
         <Title />
         <SearchNav />
-        <Results name = {name} />
+        <Results data = {data} />
         </div>
     )
   }
