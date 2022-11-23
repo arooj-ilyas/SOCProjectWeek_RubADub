@@ -3,9 +3,9 @@
 //To contain: name of user
 //Props: ??
 
-function UserName() {
+function UserName({name}) {
     return(
-        <b className="user-name" id="user-name">NAME 🦜</b>
+        <b className="user-name" id="user-name">{name}</b>
     )
   }
   

@@ -25,6 +25,7 @@ useEffect(()=>{
 
 useEffect(()=>{
   console.log(data)
+  
 },[data])
 
 
@@ -34,7 +35,7 @@ useEffect(()=>{
   return (
     <div className="App">
       <Header logo={logo}/>
-      <Display />
+      <Display data = {data} />
     </div>
   );
 }

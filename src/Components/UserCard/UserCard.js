@@ -8,12 +8,12 @@ import UserName from '../UserName/UserName'
 import Tag from '../Tag/Tag.js'
 import Bio from '../Bio/Bio.js'
 
-function UserCard() {
+function UserCard({name}) {
     return(
         <div className="card">
         <Image />
         <div className="container">
-            <UserName />
+            <UserName name = {name} />
             <Tag />
             <Bio />
         </div>

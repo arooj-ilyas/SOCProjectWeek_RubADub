@@ -7,12 +7,16 @@ import Title from '../Title/Title.js'
 import Results from '../Results/Results.js'
 import SearchNav from '../SearchNav/SearchNav.js';
 
-function Display() {
+function Display({data}) {
+
+let name = 'krish'
+//console.log(data.payload[0].name)
+
     return(
         <div>
         <Title />
         <SearchNav />
-        <Results />
+        <Results name = {name} />
         </div>
     )
   }

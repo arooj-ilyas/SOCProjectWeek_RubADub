@@ -5,10 +5,10 @@
 
 import UserCard from '../UserCard/UserCard.js'
 
-function Results() {
+function Results({name}) {
     return(
         <div id='results' className="results">
-        <UserCard />
+        <UserCard name = {name} />
         <UserCard />
         <UserCard />
         <UserCard />
