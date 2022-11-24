@@ -7,14 +7,17 @@ import Title from '../Title/Title.js'
 import Results from '../Results/Results.js'
 import SearchNav from '../SearchNav/SearchNav.js';
 
-function Display({data, handleChange, onChange}) {
+function Display({data, handleChange, onChangeProgrammingLang, onChangeLocation, onChangeSpokenLang}) {
 //let name = 'krish'
 //console.log(data.payload[0].name)
 
     return(
         <div>
         <Title />
-        <SearchNav handleChange = {handleChange} onChange={onChange}/>
+        <SearchNav handleChange = {handleChange}
+        onChangeProgrammingLang={onChangeProgrammingLang}
+        onChangeLocation={onChangeLocation}
+        onChangeSpokenLang={onChangeSpokenLang}/>
         <Results data = {data} />
         </div>
     )

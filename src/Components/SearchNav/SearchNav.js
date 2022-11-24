@@ -6,12 +6,14 @@
 import AdvancedFilter from '../AdvancedFilter/AdvancedFilter';
 import SearchBar from '../SearchBar/SearchBar.js'
 
-function SearchNav({handleChange, onChange}) {
+function SearchNav({handleChange, onChangeProgrammingLang, onChangeLocation, onChangeSpokenLang}) {
     return(
         <div className="search-nav" id="search-nav">
             <SearchBar handleChange = {handleChange}/>
             <AdvancedFilter
-            onChange={onChange}
+            onChangeProgrammingLang={onChangeProgrammingLang}
+            onChangeLocation={onChangeLocation}
+            onChangeSpokenLang={onChangeSpokenLang}
             />
         </div>
     )

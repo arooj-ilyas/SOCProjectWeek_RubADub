@@ -5,6 +5,15 @@
 
 import Dropdown from "../Dropdown/Dropdown";
 
+//function to get pLang table data
+  async function getTableData() {
+    const response = await fetch('http://localhost:3000/tables/pLangs', {method: 'GET', headers: {accept: 'application/JSON'},})
+    const dataJson = await response.json() 
+    const pLangData =(dataJson.payload)
+  }
+  getTableData()
+
+
 const pLang = [
     { value: 'c++', label: 'C++' },
     { value: 'javascript', label: 'JavaScript' },
@@ -26,19 +35,19 @@ const pLang = [
     //need to import actual country/lang etc options here
   ]
 
-function AdvancedFilter({onChange}) {
+function AdvancedFilter({onChangeProgrammingLang, onChangeLocation, onChangeSpokenLang}) {
     return(
         <div className="advanced-filter" id="advanced-filter">
             <Dropdown options={pLang}
-            onChange={onChange}
+            onChange={onChangeProgrammingLang}
             placeholder="Programming language"/>
 
             <Dropdown options={location}
-            onChange={onChange}
+            onChange={onChangeLocation}
             placeholder="Location"/>
 
             <Dropdown options={sLang}
-            onChange={onChange}
+            onChange={onChangeSpokenLang}
             placeholder="Spoken language"/>
         </div>
     )

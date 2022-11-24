@@ -9,9 +9,9 @@ function App() {
   
 const [data, setData] = useState([])
 const [searchBarText, setSearchBarText] = useState('')
-const [pLangText, setPLangText] = useState('javascript')
-const [sLangText, setSLangText] = useState('UK')
-const [locationText, setLocationText] = useState('english')
+const [pLangText, setPLangText] = useState('')
+const [sLangText, setSLangText] = useState('')
+const [locationText, setLocationText] = useState('')
 
 
 useEffect(()=>{
@@ -59,12 +59,12 @@ function handleChange(e) {
   setSearchBarText(e.target.value)
 }
 
-function onChangePL(e) {
+function onChangeProgrammingLang(e) {
   setPLangText(e.value)
   console.log(e);
 }
 
-function onChangeSL(e) {
+function onChangeSpokenLang(e) {
   setSLangText(e.value)
   console.log(e);
 }
@@ -78,7 +78,11 @@ return (
     <div className="App">
       <Header logo={logo}/>
       <Display data = {data}
-      handleChange={handleChange} onChange = {onChangePL}/>
+      handleChange={handleChange}
+      onChangeProgrammingLang={onChangeProgrammingLang}
+        onChangeLocation={onChangeLocation}
+        onChangeSpokenLang={onChangeSpokenLang}
+      />
     </div>
   );
 }
