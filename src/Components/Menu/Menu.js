@@ -4,12 +4,11 @@
 //Props: ??
 
 function Menu() {
-    return(
-        <div className="menu" >
-        <b id="menu">MENU</b>
-        </div>
+	return (
+		<div className='menu'>
+			<b id='menu'>Menu</b>
+		</div>
+	);
+}
 
-    )
-  }
-  
-  export default Menu;
+export default Menu;
