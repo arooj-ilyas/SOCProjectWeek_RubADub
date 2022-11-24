@@ -5,15 +5,11 @@
 .header {
 	background-color: #09444b;
 	min-height: 5vh;
-	font-size: 20px;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: space-evenly;
 	align-items: center;
 	color: white;
 	width: 100vw;
-	flex-grow: 1;
 	align-content: stretch;
 }
 
@@ -26,34 +22,31 @@
 	background-color: red;
 }
 
-/* .branding {
-	display: flex;
-	flex-direction: row;
-	flex-grow: 2;
-	align-items: center;
-	justify-content: flex-start;
-	background-color: blue;
-} */
-
 .brand-text {
 	display: flex;
 	flex-direction: column;
+	flex-wrap: nowrap;
 	flex-grow: 2;
-	align-self: center;
+	align-items: center;
+	align-content: center;
 	justify-content: center;
 	background-color: green;
-	align-content: stretch;
 }
 
 .rub-a-dub {
+	display: flex;
 	background-color: yellow;
 	font-size: 30px;
-	padding: 1%;
+	justify-self: flex-end;
+	margin: 0px;
 }
 
 .developer-hub {
+	display: flex;
 	background-color: blueviolet;
 	font-size: 15px;
+	justify-self: flex-start;
+	margin: 0px;
 }
 
 .menu {
