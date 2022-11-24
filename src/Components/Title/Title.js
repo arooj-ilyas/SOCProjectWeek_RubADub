@@ -4,9 +4,11 @@
 //Props: ??
 
 function Title() {
-    return(
-        <h2 className="title" id="title">Search Mentors</h2>
-    )
-  }
-  
-  export default Title;
+	return (
+		<p className='title' id='title'>
+			search mentors
+		</p>
+	);
+}
+
+export default Title;
