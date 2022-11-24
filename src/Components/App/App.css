@@ -8,19 +8,18 @@
 	min-height: 5vh;
 	display: flex;
 	flex-direction: row;
-
 	align-items: center;
 	color: white;
-	width: 100vw;
-	align-content: stretch;
+	width: 100%;
+	align-content: space-between;
 }
 
 /*change logo size in header*/
 .logo {
 	display: flex;
-	align-self: center;
+	align-items: baseline;
 	justify-content: center;
-	max-width: 64px;
+	max-width: 50px;
 	padding: 2%;
 	background-color: #09444b;
 }
@@ -31,8 +30,7 @@
 	flex-wrap: nowrap;
 	flex-grow: 2;
 	align-items: center;
-	align-content: center;
-	justify-content: center;
+	justify-content: space-around;
 	background-color: #09444b;
 }
 
@@ -73,17 +71,20 @@
 } */
 
 .menu-container {
-	display: inline-block;
+	display: flex;
 	cursor: pointer;
+	align-self: baseline;
+	justify-content: baseline;
 }
 
 .bar1,
 .bar2,
 .bar3 {
-	width: 20px;
-	height: 3px;
+	width: 28px;
+	height: 2px;
 	background-color: #ffc93c;
-	margin: 6px 32px;
+	box-shadow: 2px 2px 4px black;
+	margin: 6px 25px;
 	transition: 0.4s;
 }
 
@@ -105,7 +106,8 @@
 .title {
 	background-color: #042d32;
 	padding: 10px;
-	border: 1px solid #f79620;
+	border-top: 1px solid #f79620;
+	border-bottom: 1px solid #f79620;
 	color: white;
 }
 
@@ -179,15 +181,16 @@
 .search-bar {
 	width: 300px;
 	height: 30px;
-	max-width: 100vw;
+	max-width: 100%;
 	text-align: center;
 	border-radius: 15px;
 	border-color: #ffc93c;
-	padding: 10px;
+	padding: 2%;
 	margin: 5px;
-	position: relative;
 	background-color: #042d32;
-	font-size: 15px;
+	font-size: 12px;
+	flex-direction: row;
+	flex-wrap: nowrap;
 	color: white;
 	transition: 0.3s all;
 }
