@@ -40,7 +40,7 @@ const [locationData, setLocationData] = useState({})
 
 useEffect(()=>{
   async function getTableData() {
-    const response = await fetch('http://localhost:3000/tables/pLangs', {method: 'GET', headers: {accept: 'application/JSON'},})
+    const response = await fetch('http://localhost:3000/tables/programming-languages', {method: 'GET', headers: {accept: 'application/JSON'},})
     const dataJson = await response.json() 
     setProgrammingLanguageData(dataJson.payload)
   }
@@ -48,7 +48,7 @@ useEffect(()=>{
 
 useEffect(()=>{
     async function getTableData() {
-      const response = await fetch('http://localhost:3000/tables/sLangs', {method: 'GET', headers: {accept: 'application/JSON'},})
+      const response = await fetch('http://localhost:3000/tables/spoken-languages', {method: 'GET', headers: {accept: 'application/JSON'},})
       const dataJson = await response.json() 
       setSpokenLanguageData(dataJson.payload)
     }
@@ -71,7 +71,7 @@ useEffect(()=>{
 
             <Dropdown options={locationData}
             onChange={onChangeLocation}
-            placeholder="Location"/>
+            placeholder="Location"/>``
 
             <Dropdown options={spokenLanguageData}
             onChange={onChangeSpokenLang}

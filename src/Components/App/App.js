@@ -11,8 +11,8 @@ function App() {
   
 const [data, setData] = useState([])
 const [searchBarText, setSearchBarText] = useState('')
-const [pLangText, setPLangText] = useState('')
-const [sLangText, setSLangText] = useState('')
+const [progammingLanguageText, setProgammingLanguageText] = useState('')
+const [spokenLanguageText, setSpokenLanguageText] = useState('')
 const [locationText, setLocationText] = useState('')
 
 
@@ -30,13 +30,13 @@ useEffect(()=>{
 
 useEffect(()=>{
   async function getDataByLang() {
-    const response = await fetch(`http://localhost:3000/users/byLang?programming_language=${pLangText}&location=${locationText}&spoken_language=${sLangText}`, {method: 'GET', headers: {accept: 'application/JSON'},})
+    const response = await fetch(`http://localhost:3000/users/byLang?programming-language=${progammingLanguageText}&location=${locationText}&spoken-language=${spokenLanguageText}`, {method: 'GET', headers: {accept: 'application/JSON'},})
     const dataJson = await response.json() 
   
     setData(dataJson.payload)
   }
   getDataByLang()
-},[pLangText, locationText, sLangText])
+},[progammingLanguageText, locationText, spokenLanguageText])
 
 
 
@@ -52,8 +52,8 @@ useEffect(()=>{
 
 
 useEffect(()=>{
-  //console.log(`data console log >>> ${data}`)
-  //console.log(`search console log >>> ${searchBarText}`)
+  console.log(data)
+  console.log(`search console log >>> ${searchBarText}`)
 },[data, searchBarText ])
 
 function handleChange(e) {
@@ -62,12 +62,12 @@ function handleChange(e) {
 }
 
 function onChangeProgrammingLang(e) {
-  setPLangText(e.value)
+  setProgammingLanguageText(e.value)
   console.log(e);
 }
 
 function onChangeSpokenLang(e) {
-  setSLangText(e.value)
+  setSpokenLanguageText(e.value)
   console.log(e);
 }
 
