@@ -4,16 +4,14 @@ import Header from '../Header/Header.js'
 import logo from './logo512.png'
 import { useEffect, useState } from 'react'
 
-//TO DO: URL encoding to 'wrap' special characters for search params (see c++ for example)
-
 
 function App() {
-  
-const [data, setData] = useState([])
-const [searchBarText, setSearchBarText] = useState('')
 const [progammingLanguageText, setProgammingLanguageText] = useState('')
 const [spokenLanguageText, setSpokenLanguageText] = useState('')
 const [locationText, setLocationText] = useState('')
+const [data, setData] = useState([])
+const [searchBarText, setSearchBarText] = useState('')
+
 
 
 useEffect(()=>{
@@ -29,13 +27,14 @@ useEffect(()=>{
 
 
 useEffect(()=>{
-  async function getDataByLang() {
-    const response = await fetch(`http://localhost:3000/users/byLang?programming-language=${progammingLanguageText}&location=${locationText}&spoken-language=${spokenLanguageText}`, {method: 'GET', headers: {accept: 'application/JSON'},})
+  async function getDataByFilter() {
+    const response = await fetch(`http://localhost:3000/users/byFilter?programming_language=${progammingLanguageText}&location=${locationText}&spoken_language=${spokenLanguageText}`, {method: 'GET', headers: {accept: 'application/JSON'},})
     const dataJson = await response.json() 
+    console.log(dataJson)
   
     setData(dataJson.payload)
   }
-  getDataByLang()
+  getDataByFilter()
 },[progammingLanguageText, locationText, spokenLanguageText])
 
 
@@ -53,7 +52,7 @@ useEffect(()=>{
 
 useEffect(()=>{
   console.log(data)
-  console.log(`search console log >>> ${searchBarText}`)
+  //console.log(`search console log >>> ${searchBarText}`)
 },[data, searchBarText ])
 
 function handleChange(e) {
@@ -67,13 +66,16 @@ function onChangeProgrammingLang(e) {
 }
 
 function onChangeSpokenLang(e) {
-  setSpokenLanguageText(e.value)
   console.log(e);
+  console.log('onchangespokenlang called')
+  setSpokenLanguageText(e.value)
+  console.log(spokenLanguageText)
 }
 
 function onChangeLocation(e) {
+  console.log(e)
   setLocationText(e.value)
-  console.log(e);
+  console.log(locationText);
 }
 
 return (
