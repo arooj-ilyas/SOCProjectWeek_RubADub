@@ -4,6 +4,8 @@ import Header from '../Header/Header.js'
 import logo from './logo512.png'
 import { useEffect, useState } from 'react'
 
+//TO DO: URL encoding to 'wrap' special characters for search params (see c++ for example)
+
 
 function App() {
   
