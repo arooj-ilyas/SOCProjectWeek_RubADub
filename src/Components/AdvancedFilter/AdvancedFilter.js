@@ -16,7 +16,7 @@ const [locationData, setLocationData] = useState({})
 
 useEffect(()=>{
   async function getTableData() {
-    const response = await fetch('http://localhost:3000/tables/programming-languages', {method: 'GET', headers: {accept: 'application/JSON'},})
+    const response = await fetch('http://localhost:3000/tables/programming_languages', {method: 'GET', headers: {accept: 'application/JSON'},})
     const dataJson = await response.json() 
     setProgrammingLanguageData(dataJson.payload)
   }
@@ -24,7 +24,7 @@ useEffect(()=>{
 
 useEffect(()=>{
     async function getTableData() {
-      const response = await fetch('http://localhost:3000/tables/spoken-languages', {method: 'GET', headers: {accept: 'application/JSON'},})
+      const response = await fetch('http://localhost:3000/tables/spoken_languages', {method: 'GET', headers: {accept: 'application/JSON'},})
       const dataJson = await response.json() 
       setSpokenLanguageData(dataJson.payload)
     }
