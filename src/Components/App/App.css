@@ -1,5 +1,6 @@
 .App {
 	text-align: center;
+	background-color: #09444b;
 }
 
 .header {
@@ -7,6 +8,7 @@
 	min-height: 5vh;
 	display: flex;
 	flex-direction: row;
+
 	align-items: center;
 	color: white;
 	width: 100vw;
@@ -19,7 +21,8 @@
 	align-self: center;
 	justify-content: center;
 	max-width: 64px;
-	background-color: red;
+	padding: 2%;
+	background-color: #09444b;
 }
 
 .brand-text {
@@ -30,46 +33,90 @@
 	align-items: center;
 	align-content: center;
 	justify-content: center;
-	background-color: green;
+	background-color: #09444b;
 }
 
 .rub-a-dub {
 	display: flex;
-	background-color: yellow;
-	font-size: 30px;
-	justify-self: flex-end;
+	background-color: #09444b;
+	justify-self: center;
 	margin: 0px;
+	position: absolute;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: 40px;
+	letter-spacing: 0.15em;
 }
 
 .developer-hub {
 	display: flex;
-	background-color: blueviolet;
-	font-size: 15px;
-	justify-self: flex-start;
+	background-color: #09444b;
+	justify-self: center;
 	margin: 0px;
+	position: absolute;
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 20px;
+	letter-spacing: 0.2em;
+	top: 55px;
+
+	color: #ffc93c;
 }
 
-.menu {
+/* .menu {
 	display: flex;
 	align-self: center;
 	justify-content: center;
 	background-color: orange;
+} */
+
+.menu-container {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+	width: 20px;
+	height: 3px;
+	background-color: #ffc93c;
+	margin: 6px 32px;
+	transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+	transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+	opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+	transform: translate(0, -11px) rotate(45deg);
 }
 
 .title {
-	background-color: grey;
+	background-color: #042d32;
 	padding: 10px;
 	border: 1px solid #f79620;
-	border-width: 5px;
+	color: white;
 }
 
 /* Create card for users to show in display results */
 .card {
 	/* Add shadows to create the "card" effect */
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 	transition: 0.3s;
 	max-width: 350px;
 	margin: 5%;
+	border: 1px solid #f79620;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -81,11 +128,26 @@
 .container {
 	text-align: left;
 	padding: 2px 16px;
+	background-color: #042d32;
+	color: white;
 }
 
 /* Contain image to card size*/
 .user-image {
 	width: 100%;
+}
+
+.user-name {
+	display: flex;
+	align-items: flex-start;
+	font-size: 18px;
+	color: #f69620;
+}
+
+.user-bio {
+	display: flex;
+	align-items: flex-start;
+	font-size: 12px;
 }
 
 /* Results div to space image cards evenly*/
@@ -132,7 +194,7 @@
 
 .search-nav {
 	padding: 2%;
-	background-color: pink;
+	background-color: #09444b;
 
 	box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
 }

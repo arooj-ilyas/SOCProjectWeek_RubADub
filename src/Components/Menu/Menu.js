@@ -6,7 +6,10 @@
 function Menu() {
 	return (
 		<div className='menu'>
-			<b id='menu'>Menu</b>
+			{/* <b id='menu'>Menu</b> */}
+			<div class='bar1'></div>
+			<div class='bar2'></div>
+			<div class='bar3'></div>
 		</div>
 	);
 }
