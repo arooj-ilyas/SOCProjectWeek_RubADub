@@ -13,7 +13,7 @@ function UserCard({data}) {
 
     return(
         <div className="card">
-        <Image />
+        <Image photo = {data.photo}/>
         <div className="container">
             <UserName name = {data?.name} />
             <Tag tags = {data?.programming_lang}/>
