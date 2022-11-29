@@ -3,6 +3,11 @@
 //To contain: bio from user table
 //Props: ??
 
+/**
+ * Creates a p element with a class, id and content carrying {bio} prop data
+ * @param {*} param0 
+ * @returns 
+ */
 function Bio({bio}) {
     return(
         <p className="user-bio" id="user-bio">{bio}</p>

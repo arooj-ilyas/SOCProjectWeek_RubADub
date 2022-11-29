@@ -3,6 +3,10 @@
 //To contain: hamburger menu with links
 //Props: ??
 
+
+/**
+ * Creates hamburger Menu icon component with class name, consisting of three bars, each with class name.
+ */
 function Menu() {
 	return (
 		<div className='menu'>

@@ -3,6 +3,9 @@
 //To contain: input field with search icon
 //Props: ??
 
+/**
+ * Creates SearchBar component with class name, id and alt text, inheriting {handleChange} prop so that it can react to any text value changes in search input field
+ */
 function SearchBar({ handleChange }) {
 	return (
 		<input

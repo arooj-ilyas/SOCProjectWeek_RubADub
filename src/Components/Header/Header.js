@@ -6,6 +6,9 @@
 import Branding from "../Branding/Branding";
 import Menu from '../Menu/Menu'
 
+/**
+ * Creates Header component, includes Branding and Menu icon components, passing logo image path prop
+ */
 function Header({logo}) {
     return(
         <div className="header" id="header">

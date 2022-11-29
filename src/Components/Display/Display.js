@@ -7,6 +7,9 @@ import Title from '../Title/Title.js'
 import Results from '../Results/Results.js'
 import SearchNav from '../SearchNav/SearchNav.js';
 
+/**
+ * Creates main display of app, including Title component, SearchNav component and Results component, passing data, handleChange, onChangeProgramingLang, onChangeLocation, onChangeSpokenLang props
+ */
 function Display({data, handleChange, onChangeProgrammingLang, onChangeLocation, onChangeSpokenLang}) {
 //let name = 'krish'
 //console.log(data.payload[0].name)

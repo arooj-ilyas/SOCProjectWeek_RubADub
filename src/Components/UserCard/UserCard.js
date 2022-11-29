@@ -8,9 +8,11 @@ import UserName from '../UserName/UserName'
 import Tag from '../Tag/Tag.js'
 import Bio from '../Bio/Bio.js'
 
-function UserCard({data}) {
-    //console.log(data)
 
+/**
+ * Creates UserCard component with classname, contains Image and a div containing UserNme, Tag and Bio
+ */
+function UserCard({data}) {
     return(
         <div className="card">
         <Image photo = {data.photo}/>

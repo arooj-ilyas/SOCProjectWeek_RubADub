@@ -6,6 +6,12 @@
 import { useEffect, useState } from "react";
 import Dropdown from "../Dropdown/Dropdown";
 
+
+/**
+ * Creates three dropdown Select menus, each containing a filtering option (programming language, spoken language, location)
+ * @param {*} param0 
+ * @returns three Select dropdowns
+ */
 function AdvancedFilter({
 	onChangeProgrammingLang,
 	onChangeLocation,
@@ -15,9 +21,11 @@ function AdvancedFilter({
 	const [spokenLanguageData, setSpokenLanguageData] = useState({});
 	const [locationData, setLocationData] = useState({});
 
-	//function to get pLang table data
-
 	useEffect(() => {
+/**
+ * Gets list of options from programming_languagesfrom sql tables.
+ * @returns object programmingLanguageData in JSON format, to be used for dropdown Select component
+ */
 		async function getTableData() {
 			const response = await fetch(
 				"http://localhost:3000/tables/programming_languages",
@@ -30,6 +38,11 @@ function AdvancedFilter({
 	}, []);
 
 	useEffect(() => {
+		/**
+ * Gets list of options from spoken_languges from sql tables.
+ * @param {*} {onChangeSpokenLang}
+ * @returns object (spokenLanguageData) in JSON format, to be used for dropdown Select component
+ */
 		async function getTableData() {
 			const response = await fetch(
 				"http://localhost:3000/tables/spoken_languages",
@@ -42,6 +55,11 @@ function AdvancedFilter({
 	}, []);
 
 	useEffect(() => {
+/**
+ * Gets list of options from location from sql tables.
+ * @param {*} {onChangeLocation}
+ * @returns objects (onChangeLocation) in JSON format, to be used for dropdown Select components
+ */		
 		async function getTableData() {
 			const response = await fetch("http://localhost:3000/tables/locations", {
 				method: "GET",

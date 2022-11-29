@@ -3,6 +3,9 @@
 //To contain: logo, brand name
 //Props: ??
 
+/**
+ * Creates a frag containing logo image and brand-text div (product name and slogan) elements, each with a class and id
+ */
 function Branding({ logo }) {
 	return (
 		<>

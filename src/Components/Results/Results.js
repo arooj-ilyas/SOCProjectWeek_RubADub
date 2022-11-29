@@ -5,9 +5,10 @@
 
 import UserCard from '../UserCard/UserCard.js'
 
+/**
+ * Renders Results component with class name and id. Maps through data received from fetch request and creates UserCard component for each user entry in data
+ */
 function Results({data}) {
-  //console.log(data.name)
-
     return(
         <div id='results' className="results">
         {data.map((userEntry) =>

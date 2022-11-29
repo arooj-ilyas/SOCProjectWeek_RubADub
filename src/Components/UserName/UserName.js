@@ -3,16 +3,18 @@
 //To contain: name of user
 //Props: ??
 
+/**
+ * Creates UserName component, inheriting {name} prop from UserCard, generating name text and location flag
+ */
 function UserName({ name }) {
-	//console.log(data.name)
 	return (
 		<>
 			<div className='nameandflag'>
 				<img
 					className='flag-image'
-					id='user-image'
+					id='flag-image'
 					src='https://cdn-icons-png.flaticon.com/512/197/197374.png'
-					alt='duck'
+					alt='flag'
 				></img>
 				<b className='user-name' id='user-name'>
 					{name}
