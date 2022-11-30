@@ -6,14 +6,14 @@
 /**
  * Creates UserName component, inheriting {name} prop from UserCard, generating name text and location flag
  */
-function UserName({ name }) {
+function UserName({ name, flag_url }) {
 	return (
 		<>
 			<div className='nameandflag'>
 				<img
 					className='flag-image'
 					id='flag-image'
-					src='https://cdn-icons-png.flaticon.com/512/197/197374.png'
+					src={flag_url}
 					alt='flag'
 				></img>
 				<b className='user-name' id='user-name'>
