@@ -12,8 +12,11 @@ import Select from "react-select";
 function Dropdown({ options, dropdownName, onChange, dropdownId }) {
 	return (
 		<div className='dropdown' id='dropdown'>
-			<label htmlFor={dropdownId}>{dropdownName}</label>
+			<label htmlFor={dropdownId} id='dropdownLabel' className='dropdownLabel'>
+				{dropdownName}
+			</label>
 			<Select
+				className='dropdownSelect'
 				id={dropdownId}
 				options={options}
 				name={dropdownName}
