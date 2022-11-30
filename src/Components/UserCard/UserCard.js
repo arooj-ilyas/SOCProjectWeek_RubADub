@@ -14,7 +14,8 @@ import Bio from '../Bio/Bio.js'
  */
 function UserCard({data}) {
     return(
-        <div className="card">
+        <div className="card"
+        data-cy="userCard">
         <Image photo = {data.photo}/>
         <div className="container">
             <UserName name = {data?.name} />

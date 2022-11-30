@@ -10,7 +10,9 @@ import UserCard from '../UserCard/UserCard.js'
  */
 function Results({data}) {
     return(
-        <div id='results' className="results">
+        <div id='results'
+        className="results"
+        data-cy="results">
         {data.map((userEntry) =>
           <UserCard key = {userEntry.id}
           data = {userEntry}

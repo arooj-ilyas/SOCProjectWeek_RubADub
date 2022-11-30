@@ -14,6 +14,7 @@ function SearchBar({ handleChange }) {
 			className='search-bar'
 			id='search-bar'
 			onChange={handleChange}
+			data-cy="searchBar"
 		></input>
 	);
 }

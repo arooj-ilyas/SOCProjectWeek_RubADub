@@ -6,7 +6,6 @@
 /**
  * Creates a p element with a class, id and content carrying {bio} prop data
  * @param {*} param0 
- * @returns 
  */
 function Bio({bio}) {
     return(
