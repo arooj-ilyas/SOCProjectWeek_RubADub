@@ -11,18 +11,18 @@ import Bio from "../Bio/Bio.js";
 /**
  * Creates UserCard component with classname, contains Image and a div containing UserNme, Tag and Bio
  */
-function UserCard({ data }) {
-	console.log(`USERCARD DATA`, data);
-	return (
-		<div className='card' data-cy='userCard'>
-			<Image photo={data.photo} />
-			<div className='container'>
-				<UserName name={data?.name} flag_url={data.flag_url} />
-				<Tag tags={data?.programming_lang} />
-				<Bio bio={data?.bio} />
-			</div>
-		</div>
-	);
-}
-
-export default UserCard;
+function UserCard({data}) {
+    return(
+        <div className="card"
+        data-cy="userCard">
+        <Image photo = {data.photo}/>
+        <div className="container">
+            <UserName name = {data?.name} flag_url={data?.flag_url}/>
+            <Tag tags = {data?.programming_lang}/>
+            <Bio bio = {data?.bio}/>
+        </div>
+        </div>
+    )
+  }
+  
+  export default UserCard;
