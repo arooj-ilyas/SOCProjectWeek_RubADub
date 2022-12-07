@@ -18,7 +18,7 @@ function UserCard({data}) {
         data-cy="userCard">
         <Image photo = {data.photo}/>
         <div className="container">
-            <UserName name = {data?.name} />
+            <UserName name = {data?.name} flag_url={data?.flag_url}/>
             <Tag tags = {data?.programming_lang}/>
             <Bio bio = {data?.bio}/>
         </div>

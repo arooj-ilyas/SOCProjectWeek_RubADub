@@ -22,12 +22,13 @@ useEffect(()=>{
    * Sends a fetch request to api /users, requesting all user data. Sets fetched data as 'data' useState.
    */
   async function getAllData() {
-    const response = await fetch('http://localhost:3000/users', {method: 'GET', headers: {accept: 'application/JSON'},})
+    const response = await fetch('http://localhost:3000/users', {method: 'GET', headers: {accept: 'application/JSON'}})
     const dataJson = await response.json() 
   
     setData(dataJson.payload)
   }
   getAllData()
+  console.log(data)
 },[])
 
 
