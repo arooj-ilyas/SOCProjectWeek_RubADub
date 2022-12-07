@@ -1,8 +1,8 @@
-import './App.css'
-import Display from '../Display/Display.js'
-import Header from '../Header/Header.js'
-import logo from './logo512.png'
-import { useEffect, useState } from 'react'
+import "./App.css";
+import Display from "../Display/Display.js";
+import Header from "../Header/Header.js";
+import logo from "./logo512.png";
+import { useEffect, useState } from "react";
 
 /**
  * Runs data-fetching functions and renders Header and Display components
@@ -96,30 +96,5 @@ function onChangeSpokenLang(e) {
   setSpokenLanguageText(e.value)
   console.log(spokenLanguageText)
 }
-
-/**
- * When the value at location dropdown changes, sets locationText state to equal dropdown value
- * @param {*} e 
- */
-function onChangeLocation(e) {
-  console.log(e)
-  setLocationText(e.value)
-  console.log(locationText);
-}
-
-return (
-    <div className="App">
-      <Header logo={logo}/>
-      <Display data = {data}
-      handleChange={handleChange}
-      onChangeProgrammingLang={onChangeProgrammingLang}
-        onChangeLocation={onChangeLocation}
-        onChangeSpokenLang={onChangeSpokenLang}
-      />
-    </div>
-  );
-}
-
-
 
 export default App;

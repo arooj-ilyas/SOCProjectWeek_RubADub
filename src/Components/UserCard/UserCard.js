@@ -3,11 +3,10 @@
 //To contain: Image, Bio, UserName, Tag
 //Props: ??
 
-import Image from '../Image/Image'
-import UserName from '../UserName/UserName'
-import Tag from '../Tag/Tag.js'
-import Bio from '../Bio/Bio.js'
-
+import Image from "../Image/Image";
+import UserName from "../UserName/UserName";
+import Tag from "../Tag/Tag.js";
+import Bio from "../Bio/Bio.js";
 
 /**
  * Creates UserCard component with classname, contains Image and a div containing UserNme, Tag and Bio
