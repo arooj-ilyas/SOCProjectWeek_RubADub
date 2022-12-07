@@ -237,6 +237,7 @@
 	flex-direction: row;
 	color: var(--white);
 	transition: 0.3s all;
+	color: black;
 }
 
 .search-nav {
