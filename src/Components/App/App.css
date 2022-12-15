@@ -235,7 +235,7 @@
 	background-color: var(--white);
 	font-size: 12px;
 	flex-direction: row;
-	color: var(--white);
+	color: black;
 	transition: 0.3s all;
 }
 

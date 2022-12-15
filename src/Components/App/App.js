@@ -97,4 +97,23 @@ function onChangeSpokenLang(e) {
   console.log(spokenLanguageText)
 }
 
+function onChangeLocation(e) {
+  setLocationText(e.value)
+  console.log(e);
+}
+
+return (
+  <div className="App">
+    <Header logo={logo}/>
+    <Display data = {data}
+    handleChange={handleChange}
+    onChangeProgrammingLang={onChangeProgrammingLang}
+      onChangeLocation={onChangeLocation}
+      onChangeSpokenLang={onChangeSpokenLang}
+    />
+  </div>
+);
+
+}
+
 export default App;
