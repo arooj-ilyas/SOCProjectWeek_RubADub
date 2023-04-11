@@ -13,3 +13,4 @@
 
 ### Getting Started
 Clone the repository and run `npm install` to install the dependencies. Then run `npm start` to start the development server.
+Open up dev tools and view the app in mobile device! 
